@@ -9672,3 +9672,46 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    /* 추가한거 */
+
+    .skill-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.skill-box h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-box ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #495057;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+.skill-box ul li:last-child {
+  border-bottom: none;
+}
+
+
+/* 22 */
+
+

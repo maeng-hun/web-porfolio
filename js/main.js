@@ -440,3 +440,28 @@ $(function() {
 
 });
 
+
+// 코딩 시작일부터 오늘까지의 일수 계산해서 애니메이션으로 표시
+document.addEventListener("DOMContentLoaded", function () {
+  const codingEl = document.querySelector(".coding-days");
+  if (!codingEl) return;
+
+  const startDateStr = codingEl.dataset.start; // "2024-11-01"
+  const startDate = new Date(startDateStr);
+  const today = new Date();
+
+  const diffTime = today - startDate;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  // 애니메이션 효과
+  let count = 0;
+  const interval = setInterval(() => {
+    if (count >= diffDays) {
+      clearInterval(interval);
+    } else {
+      count++;
+      codingEl.textContent = count;
+    }
+  }, 20);
+});
+
